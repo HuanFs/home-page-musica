@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet&family=Roboto:wght@400;500;700');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    display:flex;
+    font-family:'Roboto', Arial, sans-serif;
+    background-color:bisque;
+}
+/*container principal*/
+main{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+/*navegação*/
+main nav{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:1em 2em;
+    border:1px solid #000;
+}
+nav img{
+    cursor:pointer;
+}
+nav ol{
+    list-style-type:none;
+    display:flex;
+    gap:1em;
+}
+ol a{
+    text-decoration-line:none;
+    color:#000;
+    font-weight:500;
+}
+nav button{
+    padding:0.3em 1em;
+    font-size:1em;
+    font-weight:500;
+    border:2px solid #000;
+    box-shadow:3px 3px 1px #000;
+    background-color:#ED4D1B;
+}
+/*primeira seção/apresentação*/
+header{
+    width:100%;
+    display:flex;
+    height:45em;
+    border:1px solid #000;
+}
+header aside:first-child{
+    width:35%;
+    height:500px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:2.2em;
+    padding:0px 2em;
+}
+aside h1 span{
+    display:flex;
+}
+span{
+    color:#ED4D1B;
+}
+/*imagem ao lado da span do h1*/
+#tree{
+    width:30px;
+    margin-top:-40px;
+}
+aside h1{
+    font-size:2.2em;
+}
+aside p{
+    font-weight:500;
+}
+aside button{
+    width:150px;
+    padding:0.3em 0;
+    font-size:1em;
+    font-weight:500;
+    border:2px solid #000;
+    box-shadow:3px 3px 1px #000;
+    background-color:#ED4D1B;
+}
+aside img{
+    width:100%;
+}
+section{
+    width:100%;
+    height:30em;
+    display:flex;
+    flex-direction:column;
+    gap:4em;
+    align-items:center;
+    border:1px solid #000;
+}
+/*pai dos cards*/
+article{
+    width:100%;
+    display:flex;
+    gap:0.6em;
+    justify-content:center;
+}
+/*cards*/
+article div{
+    width:23%;
+    height:17em;/*estou fazendo os cards*/ 
+    border:1px solid black;
+    padding:1em;
+    background-color:#FF9A3C;
+    box-shadow:3px 3px 1px #000;
+    margin-top:-90px;
+}
+article div:nth-child(odd){
+    background-color:#ED4D1B;
+    margin-top:-100px;
+}
+div h2{
+    margin:0.6em 0;
+    font-weight:700;
+}
+div img:last-child{
+    width:50px;
+    position:relative;
+    left:80%;
+    top:10%;
+}
+section h1{
+    font-size:2em;
+    font-weight:700;
+}
+section button{
+    width:150px;
+    padding:0.3em 0;
+    font-size:1em;
+    font-weight:500;
+    border:2px solid #000;
+    box-shadow:3px 3px 1px #000;
+    background-color:#ED4D1B;
+}
+/*afinamento das bordas que ficaram grossas*/
+main nav, header, section{
+    border-bottom:none;
+}
+/*seção final/footer*/
+footer{
+    width:100%;
+    height:15em;
+    display:flex;
+    align-items:center;
+    gap:2em;
+    padding:0 2.5em;
+    border:1px solid #000;
+    font-weight:bold;
+}
+footer div{
+    width:20%;
+    height:10em;
+}
+footer div img{
+    margin-bottom:1em;
+}
+footer div ol{
+    list-style-type:none;
+}
+div ol li{
+    margin-bottom:1em;
+}
+footer form{
+    display:flex;
+    flex-direction:column;
+    gap:2em;
+}
+footer form input{
+    width:150%;
+    height:30px;
+    border:2px solid #000;
+    box-shadow:3px 3px 1px #000;
+    outline:0;
+    text-indent:1em;
+    font-family:'Handjet', Roboto, sans-serif;
+    font-size:1.1em;
+}
+footer form button{
+    width:150px;
+    padding:0.3em 0;
+    font-size:1em;
+    font-weight:500;
+    border:2px solid #000;
+    box-shadow:3px 3px 1px #000;
+    background-color:#ED4D1B;
+}
+button:hover, article div:hover{
+    cursor:pointer;
+}
+button:hover, a:hover{
+    opacity:0.8;
+}
+/*animação dos cards*/
+@keyframes tilt{
+    0%{
+        transform: translateY(0px)
+    }
+    25%{
+        transform:translateY(5px)
+    }
+    50%{
+        transform:translateY(-5px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+article div:hover{
+    animation-name:tilt;
+    animation-duration: 0.2s;
+	animation-iteration-count:1;
+	animation-direction:alternate;
+}
+
+@media screen and (max-width:700px){
+    main{
+        display:grid;
+        grid-template-areas:"nav" "presentation" "cards" "footer";
+        grid-template-rows:10em, 60em, 110em, 32em;
+    }
+    nav{
+        grid-area:nav;
+    }
+    nav ol, nav button{
+        display:none;
+    }
+    header{
+        grid-area:presentation;
+        height:60em;
+        flex-direction:column-reverse;
+    }
+    aside h1{
+        font-size:4em;
+    }
+    header aside:first-child{
+        width:100%;
+    }
+    section{
+        grid-area:cards;
+        height:110em;
+        padding-top:1em;
+    }
+    section article{
+        flex-direction:column;
+        align-items:center;
+    }
+    article div{
+        height:23em;
+        width:60%;
+        padding:2em;
+        margin-top:0;
+    }
+    article div:nth-child(odd){
+        margin-top:0;
+    }
+    article div img{
+        width:80px;
+    }
+    div img:last-child{
+        top:20%;
+        width:60px;
+    }
+    article div h2{
+        margin:1 em 0;
+    }
+    footer{
+        grid-area:footer;
+        height:32em;
+        flex-direction:column;
+        padding-top:1em;
+        gap:0.5em;
+    }
+    footer div{
+        width:80%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    footer div:first-child{
+        width:60%;
+        flex-direction:column;
+        text-align:justify;
+        text-overflow: ellipsis;
+    }
+    footer form{
+        width:80%;
+        gap:0.8em;
+    }
+    footer form input{
+        width:99%;
+    }
+}
+/*arrumar apenas o footer para versão mobile*/
+/*adicionar interatividade, e tambem um menu deslizante 
+na area de navegação*/
+
+
