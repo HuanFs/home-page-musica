@@ -1,7 +1,4 @@
-let wid = window.innerWidth;
-console.log(wid);
-function menu(){
-    if(wid<=600){
-        //CRIAR A FUNÇÃO QUE ABRE E FECHA O MENU
-    }
-}
+//criar a função que abre e fecha o menu
+//a partir de uma variavel number que diminui
+//ou aumenta de acordo com o clique do menu
+//servindo pra indicar qual o src da menu Icon
