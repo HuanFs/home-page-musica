@@ -11,6 +11,7 @@ body{
 }
 /*container principal*/
 main{
+    min-width:301px;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -113,6 +114,9 @@ section{
     align-items:center;
     border:1px solid #000;
 }
+#arrow-curve{
+    display:none;
+}
 /*pai dos cards*/
 article{
     width:100%;
@@ -183,10 +187,17 @@ footer div p{
     font-size:0.8em;
 }
 footer div ol{
+    width:210px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
     list-style-type:none;
 }
 div ol li{
     margin-bottom:1em;
+}
+footer div ol li:hover{
+    margin-left:-5px;
 }
 footer form{
     display:flex;
@@ -330,12 +341,33 @@ article div:hover{
         position:absolute;
         top:0;
         right:0;
+        background-color:#00000011;
+        transition:0.5s;
     }
     #menu ol{
+        width:90%;
         flex-direction:column;
+        align-items:center;
+    }
+    #menu ol li:hover{
+        margin-left:-5px;
     }
     #menu button{
         box-shadow:0 0 0 #00000000;
+    }
+}
+@media screen and (max-width:400px){
+    header{
+        gap:4em;
+    }
+    header aside:first-child{
+        padding-bottom:5em;
+    }
+    #arrow-curve{
+        display:inline-flex;
+        width:160px;
+        position:relative;
+        left:130px;
     }
 }
 /*arrumar apenas o footer para versão mobile*/
