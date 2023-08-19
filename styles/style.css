@@ -251,10 +251,13 @@ article div:hover{
 }
 
 @media screen and (max-width:700px){
+    body{
+        display:grid;
+        place-items:center;
+    }
     main{
         display:grid;
         grid-template-areas:"nav" "presentation" "cards" "footer";
-        grid-template-rows:10em, 60em, 110em, 32em;
     }
     nav{
         grid-area:nav;
