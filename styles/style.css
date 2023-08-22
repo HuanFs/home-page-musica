@@ -5,6 +5,7 @@
     box-sizing:border-box;
 }
 body{
+    width:100vw;
     display:flex;
     font-family:'Roboto', Arial, sans-serif;
     background-color:bisque;
@@ -250,10 +251,11 @@ article div:hover{
 	animation-direction:alternate;
 }
 
-@media screen and (max-width:700px){
+@media screen and (max-width:489px){
     body{
-        display:grid;
-        place-items:center;
+        max-width:489px;
+        width:490px;
+        margin:0 auto;
     }
     main{
         display:grid;
