@@ -26,6 +26,7 @@ main nav{
     padding:1em 2em;
     border:1px solid #000;
 }
+/*logo*/
 nav img{
     cursor:pointer;
 }
@@ -114,10 +115,11 @@ section{
     align-items:center;
     border:1px solid #000;
 }
+/*imagem da flecha curvada que só é exibida em telas menores*/
 #arrow-curve{
     display:none;
 }
-/*pai dos cards*/
+/*container pai dos cards*/
 article{
     width:100%;
     display:flex;
@@ -250,7 +252,7 @@ article div:hover{
 	animation-iteration-count:1;
 	animation-direction:alternate;
 }
-
+/*layout mobile*/
 @media screen and (max-width:489px){
     body{
         max-width:489px;
@@ -344,7 +346,7 @@ article div:hover{
         flex-direction:column;
         position:absolute;
         top:0;
-        right:0;
+        right:-7em;
         background-color:#00000011;
         transition:0.5s;
     }
@@ -360,6 +362,7 @@ article div:hover{
         box-shadow:0 0 0 #00000000;
     }
 }
+/*quebra do layout mobile para telas ainda menores*/
 @media screen and (max-width:400px){
     header{
         gap:4em;
