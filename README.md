@@ -10,4 +10,6 @@
 
 * menuOptions(): - verifica o valor da variável **openClose** e de acordo com o valor abre ou fecha o menu, por fim, altera o valor da variável pra proxima execução da função
 
+* Submmit(): - verifica se o formato do email está correto para então exibir a mensagem de erro ou sucesso da inscrição e alterar o estilo do imput de acordo com este resultado
+
  

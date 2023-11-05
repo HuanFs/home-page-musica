@@ -231,6 +231,18 @@ button:hover, article div:hover{
 button:hover, a:hover{
     opacity:0.8;
 }
+
+/*mensagem de sucesso da inscrição*/
+#success{
+    width:100px;
+    height:100px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%);
+    transform:translateY(-50%);
+    border:1px solid red;
+}
 /*animação dos cards*/
 @keyframes tilt{
     0%{

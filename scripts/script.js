@@ -1,6 +1,8 @@
 const menuIcon = document.querySelector("#menu-icon");
 let menu = document.querySelector("#menu");
+let submmit = document.querySelector("form button");
 let openClose=0;
+submmit.addEventListener("click", Submmit);
 menuIcon.addEventListener("click", menuOptions);
 function menuOptions(){
     if(openClose==0){
@@ -16,5 +18,17 @@ function menuOptions(){
         openClose--;
     }
 }
-//CRIAR UMA FUNÇÃO QUE EXIBE UMA CAIXA
-//DE DIALOGO DE EMAIL ENVIADO
+//função que checa o email e exibe a mensagem de cadastro
+function Submmit(){
+    let mail = document.querySelector("form input");
+    console.log(mail);
+    if(mail.value.includes(".")){
+        alert("Inscrição realizada com sucesso!")
+        mail.style.border="2px solid #000";
+        mail.value="";
+    }
+    else{
+        alert("formato de email inválido");
+        mail.style.border="2px solid red";
+    }
+}
